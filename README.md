@@ -11,7 +11,7 @@ Daha sonra bağımlılıkların yüklenmesi için
 
 Uygulamada manage.py nin bulunduğu dizinde aşağıdaki komut ile uygulama ayağa kaldırılabilir.
 
-    manage.py runserver localhost:3000
+    python manage.py runserver localhost:3000
 
 **Kullanıcı Adı:** admin
 
@@ -21,10 +21,19 @@ Uygulamada manage.py nin bulunduğu dizinde aşağıdaki komut ile uygulama aya�
 yeni bir kullanıcı eklemek için 
     
     localhost:3000/users/register
+    {
+        "username":"test1",
+        "password":"case1234",
+        "password2":"case1234"
+    }
 
 login olup token almak için
 
     localhost:3000/users/login
+    {
+        "username":"test1",
+        "password":"case1234"
+    }
 
 Örnek kullanım
 
@@ -35,6 +44,33 @@ login olup token almak için
     r = requests.get(url, headers=headers)
 
 Projedeki tüm servislere Token eklenerek kullanılabilir.
+
+Post istekleri için örnek objeler aşağıdaki gibidir.
+
+    localhost:3000/categories
+     {
+      "name": "Shoes",
+      "description": "Everybody needs shoes."
+      }
+
+    localhost:3000/products
+     {
+        "name": "Yellow Trousers",
+        "description": "Flaming trousers.",
+        "category": 2,
+        "price": 50
+     }
+
+    localhost/sliders
+    {
+      "image": "test1.png",
+      "productId": 2
+    }
+
+    localhost:3000/favorite
+     {
+       "productId": 4
+     }
 
 
 
