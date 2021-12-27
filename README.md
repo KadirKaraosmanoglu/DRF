@@ -2,7 +2,7 @@
 
 
 
-Uygulamanın bulunduğu dizinde aşağıdaki komut ile uygulama ayağa kaldırılabilir.
+Uygulamada manage.py nin bulunduğu dizinde aşağıdaki komut ile uygulama ayağa kaldırılabilir.
 
     manage.py runserver localhost:3000
 
